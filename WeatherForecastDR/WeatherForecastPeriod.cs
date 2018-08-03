@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace WeatherForecastDR
 {
+    /// <summary>
+    /// Model for a WeatherForecastPeriod returned by Weather.gov webservice
+    /// </summary>
     internal class WeatherForecastPeriod
     {
         public DateTime StartTime { get; set; }

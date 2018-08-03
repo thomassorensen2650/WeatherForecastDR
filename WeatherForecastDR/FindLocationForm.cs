@@ -6,6 +6,10 @@ using System.Windows.Forms;
 
 namespace WeatherForecastDR
 {
+
+    /// <summary>
+    /// Form that can find location (latitude and longitude) from a address using Google GeoCode API
+    /// </summary>
     public partial class FindLocationForm : Form
     {
         const string googleApiKey = "AIzaSyA5y79x4M1agAxXkwB21skuFonN1hBFSr0";
@@ -18,7 +22,6 @@ namespace WeatherForecastDR
         public FindLocationForm(WeatherDR dr, bool isReadyOnly)
         {
             _dr = dr;
-            
             InitializeComponent();
             webClient.DownloadStringCompleted += WebClient_DownloadStringCompleted;
             searchTextbox.Text = dr.SearchString;

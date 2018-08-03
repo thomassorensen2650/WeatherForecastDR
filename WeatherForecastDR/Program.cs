@@ -14,6 +14,7 @@ namespace WeatherForecastDR
         [STAThread]
         static void Main()
         {
+            // We keep this entry point so its easier to debug UI 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             // for VS debugging 

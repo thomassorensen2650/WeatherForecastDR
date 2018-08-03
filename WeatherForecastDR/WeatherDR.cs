@@ -9,6 +9,9 @@ using System.Runtime.InteropServices;
 
 namespace WeatherForecastDR
 {
+    /// <summary>
+    /// Weather Data Reference is a OSISoft PI AF Data Reference used to get Forecast temperatures from Weather.gov. 
+    /// </summary>
     [Guid("04D0C230-80DE-4FD4-8F54-C147C7FCA747")]
     [Serializable]
     [Description("Weather;Get Weather Info")]
@@ -62,6 +65,7 @@ namespace WeatherForecastDR
 
             using (var webClient = new WebClient())
             {
+                // API only gives me access from a browser, so we need to identify as a browser
                 webClient.Headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko";
                 webClient.Headers["Accept"] = "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8";
 
